@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-capitalize>{{list.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          <ion-label fixed>List name</ion-label>
+          <ion-input type="text" [(ngModel)]="list.name" text-capitalize></ion-input>
+        </ion-card-header>
+        <ion-card-content *ngIf="list.items">
+          <ion-list>
+            <ion-item (click)="updateList(item)"
+              *ngFor="let item of list.items">
+              <ion-icon item-left *ngIf="!item.finished" ios="ios-square-outline" md="md-square-outline"></ion-icon>
+              <ion-icon item-left *ngIf="item.finished" ios="ios-checkbox-outline" md="md-checkbox-outline"></ion-icon>
+              <h2 [class.item-cross]="item.finished">{{item.name}}</h2>
+            </ion-item>
+            <ion-item margin-bottom>
+              <ion-input (keyup.enter)="addItem()"
+                type="text" [(ngModel)]="listItemName" placeholder="add item"></ion-input>
+            </ion-item>
+            <button (click)="addItem()"
+              ion-button small>Add item</button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <button (click)="deleteList()"
+      ion-button class="button-block" color="danger">
+      <ion-icon ios="ios-close-circle" md="md-close-circle" class="addListIcon"></ion-icon>
+      Delete List
+    </button>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

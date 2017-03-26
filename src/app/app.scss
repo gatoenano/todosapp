@@ -1,0 +1,58 @@
+// App Global Sass
+.tab-title span {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.item-hidden {
+  display: none;
+}
+.item-cross {
+  text-decoration: line-through;
+}
+.ion-ios-happy-outline,
+.ion-md-happy {
+  color: #C7C7C7!important;
+  font-size: 10rem!important;
+}
+.addListIcon {
+  font-size: 2.6rem;
+  margin-right: 1rem;
+}
+.no-lists {
+  color: #C7C7C7;
+}
+.pointer {
+  cursor: pointer;
+}
+.text-center {
+  text-align: center!important
+}
+
+/* Animations */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
