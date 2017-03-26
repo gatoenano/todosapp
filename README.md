@@ -1,4 +1,4 @@
-# Spotiapp
+# Todosapp
 
 This is an [Ionic 2](https://github.com/driftyco/ionic) app example made for TEST purposes. It's a simple app where to add a TODO lists. It creates, modify, deletes lists showing it divided by pendings and finished lists.  
 
